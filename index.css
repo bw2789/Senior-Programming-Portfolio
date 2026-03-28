@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+
+body {
+  height: 200vh;  /*vh = viewport height*/
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #111;
+}
+
+.scroll-text {
+  font-size: 5rem;
+  white-space: nowrap;
+  display: flex;
+}
+
+.scroll-text span {
+  /* opacity: 0;        start invisible */
+  display: inline-block;
+  transform: translateY(50px);  /* start slightly below */
+}
+
+/* h1 {
+    opacity: 0;
+    font-size: 3rem;
+    letter-spacing: 2px;
+} */
