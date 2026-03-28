@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,27 +7,67 @@
 html, body {
   width: 100%;
   height: 500%; /* enough scroll space */
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+}
+
+#banner {
+  background-image: url("images/image.png");
+  background-size: cover; 
+  background-position: center; 
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+
+nav#nav1 {
+  width: 100%;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav#nav1 .container {
   display: flex;
   justify-content: center;
 }
 
-.header {
+nav#nav1 a {
+  flex: 1;
   text-align: center;
-  margin-top: 100px; /* starting offset from top */
+  padding: 15px 0;
+  font-size: 30px; 
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
-.creative-text {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* center letters per line */
-  font-size: clamp(3rem, 8vw, 5rem); /* responsive */
+nav#nav1 a:hover {
+  color: rgb(173,12,12);
+  background-color: rgb(43,43,43);
+  text-decoration: underline;
+}
+
+#banner {
+  background-image: url("images/image.png");
+  background-size: cover; 
+  background-position: center; 
+  width: 100%;
+  height: 700px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative; 
+}
+
+#Senior-Programming-Portfolio {
+  text-align: left;
+  font-size: 60px;
   overflow: hidden;
-}
 
-.creative-text span {
-  display: inline-block;
-  opacity: 0;                /* start invisible */
-  transform: translateY(-50px); /* start slightly above */
 }
