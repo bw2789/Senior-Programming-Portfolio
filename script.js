@@ -1,30 +1,42 @@
-
-// GASP animation
-gsap.to("h1", {
-    duration: 2,
-    opacity: 1,
-    y: -30,
-    ease: "power3.out",
-    delay: 2
-})
+// gsap.to(".Header", {
+//     duration: 2,
+//     opacity: 1,
+//     y: -30,
+//     ease: "power3.out",
+//     delay: 2
+// })
 
 gsap.registerPlugin(ScrollTrigger);
 
-const text = document.getElementById("animated-text");
-text.innerHTML = text.textContent
-  .split("")                  
-  .map(char => `<span>${char}</span>`)  
-  .join("");
+// gsap.to(".header", {
+//   scrollTrigger: {
+//     trigger: ".header",
+//     start: "20px 80%",
+//     end: "bottom 100px",
+//     markers: true,
+//     toggleActions: "restart pause reverse pause"
 
-// Animate each character on scroll
-gsap.to("#animated-text span", {
-  y: -50,          // move up
-  opacity: 1,     
-  stagger: 0.05,   
-  scrollTrigger: {
-    trigger: ".hero",
-    start: "top 80%",
-    end: "bottom top",
-    scrub: true        
-  }
+//   }, 
+//   y: -20,
+//   duration: 3
+
+
+// })
+
+// animate each letter individually
+document.querySelectorAll(".creative-text span").forEach((letter, i) => {
+  gsap.to(letter, {
+    scrollTrigger: {
+      trigger: letter,
+      markers: true,
+      start: "top 90%",
+      end: "bottom 50%",
+      scrub: 0.6
+    },
+    y: 100 + (i * 2),   // stagger vertical movement
+    opacity: 1,
+    rotation: gsap.utils.random(-10, 10),
+    ease: "power2.out",
+    duration: 1.5
+  });
 });
