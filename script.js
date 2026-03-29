@@ -23,3 +23,17 @@ tl.from(chars, {
 }, "<"); // "<" means start at the same time as previous animation
 
 
+new Swiper('.swiper', {
+  loop: true,
+
+  // Paagination bullets
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
