@@ -6,7 +6,7 @@
 
 html, body {
   width: 100%;
-  height: 500%; /* enough scroll space */
+  height: 200%; /* enough scroll space */
 }
 
 #banner {
@@ -16,7 +16,7 @@ html, body {
   width: 100%;
   height: 80vh;
   display: flex; 
-  align-items: center;
+  align-items:  center;
   justify-content: flex-start; 
   padding-left: 5%;           
   color: #fff;
@@ -58,6 +58,7 @@ nav#nav1 a:hover {
   font-size: 3.7rem;
   max-width: 870px;
   overflow: hidden;
+  margin-top: -60px;
   
 }
 
@@ -80,4 +81,19 @@ nav#nav1 a:hover {
     font-size: 2rem;
   }
 
+}
+
+#banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 15%;
+}
+
+#pfp {
+  width: 20vw;  /* 20% of viewport width */
+  height: auto; /* maintain aspect ratio */
+  max-width: 400px; /* optional max size */
+  object-fit: cover;
 }
