@@ -23,12 +23,15 @@ tl.from(chars, {
 }, "<"); // "<" means start at the same time as previous animation
 
 
-new Swiper('.swiper', {
+new Swiper('.card-wrapper', {
   loop: true,
+  spaceBetween: 30,
 
   // Paagination bullets
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
   },
 
   // Navigation arrows
@@ -36,4 +39,20 @@ new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  // Responsive breakpoints
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    },
+
+  }
+
+    
 });
