@@ -79,12 +79,6 @@ nav#nav1 a:hover {
   
 }
 
-/* #Senior-Programming-Portfolio {
-  text-align: left;
-  font-size: 60px;
-  overflow: hidden;
-
-} */
 
 @media (max-width: 875px) {
 
@@ -109,8 +103,8 @@ nav#nav1 a:hover {
 }
 
 #pfp {
-  width: 20vw;  /* 20% of viewport width */
-  height: auto; /* maintain aspect ratio */
-  max-width: 400px; /* optional max size */
+  width: 20vw;  
+  height: auto; 
+  max-width: 400px; 
   object-fit: cover;
 }

@@ -22,3 +22,4 @@ tl.from(chars, {
   ease: "back.out(1.7)"
 }, "<"); // "<" means start at the same time as previous animation
 
+
