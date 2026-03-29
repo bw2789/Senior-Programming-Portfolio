@@ -14,11 +14,11 @@ html, body {
   background-size: cover; 
   background-position: center; 
   width: 100%;
-  height: 100%;
-  text-align: center;
+  height: 80vh;
   display: flex; 
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; 
+  padding-left: 5%;           
   color: #fff;
 }
 
@@ -33,6 +33,7 @@ nav#nav1 {
 
 nav#nav1 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -40,7 +41,7 @@ nav#nav1 a {
   flex: 1;
   text-align: center;
   padding: 15px 0;
-  font-size: 30px; 
+  font-size: 2rem; 
   font-weight: bold;
   text-decoration: none;
   color: white;
@@ -52,23 +53,22 @@ nav#nav1 a:hover {
   text-decoration: underline;
 }
 
-#banner {
-  background-image: url("images/image.png");
-  background-size: cover; 
-  background-position: center; 
-  width: 100%;
-  height: 700px;
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  position: relative; 
+#Senior-Programming-Portfolio {
+  text-align: left;
+  font-size: 4rem;
+  max-width: 600px;
 }
 
-#Senior-Programming-Portfolio {
-  margin-left: -850px;
-  text-align: left;
-  font-size: 60px;
-  overflow: hidden;
+@media (max-width: 600px) {
+
+  #banner {
+    justify-content: center; 
+    padding-left: 0;
+    text-align: center;
+  }
+
+  #Senior-Programming-Portfolio {
+    font-size: 2rem;
+  }
 
 }
