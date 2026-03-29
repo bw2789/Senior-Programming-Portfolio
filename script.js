@@ -27,12 +27,19 @@ new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 30,
 
+  // effect: "coverflow",
+
   coverflowEffect: {
-    rotate: 30,              // rotate angle
-    stretch: 0,              // spacing between slides
-    depth: 150,              // z-axis depth
-    modifier: 1,             // effect multiplier
-    slideShadows: true       // adds subtle shadows
+    rotate: 30,              
+    stretch: 0,              
+    depth: 100,              
+    modifier: 1,            
+    slideShadows: true       
+  },
+
+  autoplay: {
+    delay: 3000,      // 3 seconds between slides
+    disableOnInteraction: false, // keeps autoplay even after user interacts with it
   },
 
   // Paagination bullets
