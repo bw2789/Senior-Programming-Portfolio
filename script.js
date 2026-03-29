@@ -38,7 +38,7 @@ new Swiper('.card-wrapper', {
   },
 
   autoplay: {
-    delay: 3000,      // 3 seconds between slides
+    delay: 3000, // 3 seconds between slides
     disableOnInteraction: false, // keeps autoplay even after user interacts with it
   },
 
