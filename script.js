@@ -27,6 +27,14 @@ new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 30,
 
+  coverflowEffect: {
+    rotate: 30,              // rotate angle
+    stretch: 0,              // spacing between slides
+    depth: 150,              // z-axis depth
+    modifier: 1,             // effect multiplier
+    slideShadows: true       // adds subtle shadows
+  },
+
   // Paagination bullets
   pagination: {
     el: '.swiper-pagination',
