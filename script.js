@@ -112,7 +112,7 @@ gsap.from(".card-item", {
 
 function showTab(num, el) {
   const currentInfo = document.querySelector('.tab-content.active');
-  const currentImg = document.querySelector('.image img.active');
+  const currentImg = document.querySelector('.image img.active, .image video.active');
 
   const newInfo = document.getElementById(`info-${num}`);
   const newImg = document.getElementById(`img-${num}`);

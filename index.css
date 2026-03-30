@@ -342,19 +342,27 @@ nav#nav1 a:hover {
 }
 
 .tab-content,
-.image img {
+.image img,
+.image video {
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .tab-content.active,
-.image img.active {
+.image img.active,
+.image video.active {
   display: block;
   opacity: 1;
 }
 
 .image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.image video {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
