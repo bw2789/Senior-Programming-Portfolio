@@ -86,7 +86,7 @@ gsap.from("#project-overview h1", {
     trigger: "#project-overview",
     start: "top 80%", // when it enters viewport
     toggleActions: "play none none none", //: onEnter: play onLeave: none onEnterBack: none onLeaveBack: none                *need to remember the order
-    markers: true
+    markers: false
   },
   y: -50,
   opacity: 0,
@@ -100,7 +100,7 @@ gsap.from(".card-item", {
     trigger: ".card-container",
     start: "top 80%",
     toggleActions: "play none none none",
-    markers: true
+    markers: false
   },
   y: 50,
   opacity: 0,
@@ -150,7 +150,7 @@ gsap.from("#projects h1", {
     trigger: "#projects",
     start: "top 80%", // when it enters viewport
     toggleActions: "play none none none", //: onEnter: play onLeave: none onEnterBack: none onLeaveBack: none                *need to remember the order
-    markers: true
+    markers: false
   },
   x: -50,
   opacity: 0,
@@ -164,7 +164,7 @@ gsap.from(".tabs-section", {
     trigger: ".tabs-section",
     start: "top 80%",
     toggleActions: "play none none none",
-    markers: true
+    markers: false
   },
   x: -50,
   opacity: 0,
@@ -179,7 +179,7 @@ gsap.from(".tabs-section .tab-content.active", {
     trigger: ".tabs-section",
     start: "top 80%",
     toggleActions: "play none none none",
-    markers: true
+    markers: false
   },
   y: 30,
   opacity: 0,
@@ -192,7 +192,7 @@ gsap.from(".tabs-section .image img.active", {
     trigger: ".tabs-section",
     start: "top 80%",
     toggleActions: "play none none none",
-    markers: true
+    markers: false
   },
   y: 30,
   opacity: 0,
