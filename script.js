@@ -41,8 +41,6 @@ new Swiper('.card-wrapper', {
     slideShadows: true       
   },
 
-  slidesPerView: "auto",
-
   autoplay: {
     delay: 3000, // 3 seconds between slides
     disableOnInteraction: false, // keeps autoplay even after user interacts with it
