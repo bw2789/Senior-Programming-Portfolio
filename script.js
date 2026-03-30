@@ -108,4 +108,4 @@ gsap.from(".card-item", {
   stagger: 0.2,
   // ease: "power3.out",
   ease: "back.out"
-});
+});  
