@@ -1,6 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
+
+// aniamtion for banner text and pfp
 let split = SplitText.create("#Senior-Programming-Portfolio", { type: "chars" });
 let chars = split.chars
 
@@ -21,8 +23,10 @@ tl.from(chars, {
   duration: 0.8,
   ease: "back.out(1.7)"
 }, "<"); // "<" means start at the same time as previous animation
+// banner animation ends-------------------------
 
 
+// Initialize Swiper
 new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 30,
@@ -73,4 +77,35 @@ new Swiper('.card-wrapper', {
   }
 
     
+});
+// swiper ends-------------------------
+
+// animation for project overview section
+gsap.from("#project-overview h1", {
+  scrollTrigger: {
+    trigger: "#project-overview",
+    start: "top 80%", // when it enters viewport
+    toggleActions: "play none none none", //: onEnter: play onLeave: none onEnterBack: none onLeaveBack: none                *need to remember the order
+    markers: true
+  },
+  y: -50,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+// animation for project cards
+gsap.from(".card-item", {
+  scrollTrigger: {
+    trigger: ".card-container",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.2,
+  // ease: "power3.out",
+  ease: "back.out"
 });
