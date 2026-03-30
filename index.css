@@ -10,7 +10,7 @@
 
 body {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: #1a1a1a;
   margin: 0;
   padding: 0;
@@ -127,8 +127,10 @@ nav#nav1 a:hover {
 }
 
 .card-item {
-  width: 100%;
+  width: clamp(250px, 25vw, 350px);
 }
+
+
 
 .card-list .card-item {
   list-style: none;
@@ -237,6 +239,11 @@ nav#nav1 a:hover {
   border: 0px solid #000000; 
 }
 
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
   .card-wrapper {
     margin: 0 10px 25px;
@@ -245,6 +252,17 @@ nav#nav1 a:hover {
   .card-wrapper .swiper-slide-button {
     display: none;
   }
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    padding: 10px 5px;
+  }
+
+  .card-list .card-link {
+    padding: 12px;
+  }
+}
 
   
 /* @media (max-width: 768px) {
@@ -257,7 +275,7 @@ nav#nav1 a:hover {
 } */
 
   
-}
+
 /* ----------------------------- */
 
 #project-overview {
