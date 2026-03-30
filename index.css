@@ -119,11 +119,23 @@ nav#nav1 a:hover {
 }
 
 /* Card Styles */
+.card-container.swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
 .card-wrapper {
+  width: 100%;
   max-width: 1400px;
-  margin: 0 60px 35px;
+  margin: 0 auto 35px;
   padding: 20px 10px;
   overflow: hidden;
+  box-sizing: border-box;
+}
+
+.card-list {
+  width: 100%;
 }
 
 .card-list .card-item {
