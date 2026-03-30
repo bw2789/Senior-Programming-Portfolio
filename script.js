@@ -198,4 +198,4 @@ gsap.from(".tabs-section .image img.active", {
   opacity: 0,
   duration: 0.8,
   ease: "power3.out"
-}); 
+});
