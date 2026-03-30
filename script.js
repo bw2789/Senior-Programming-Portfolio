@@ -109,3 +109,93 @@ gsap.from(".card-item", {
   // ease: "power3.out",
   ease: "back.out"
 });  
+
+function showTab(num, el) {
+  const currentInfo = document.querySelector('.tab-content.active');
+  const currentImg = document.querySelector('.image img.active');
+
+  const newInfo = document.getElementById(`info-${num}`);
+  const newImg = document.getElementById(`img-${num}`);
+
+  // Remove active class from all tabs
+  document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
+  el.classList.add('active');
+
+  if (currentInfo && currentImg) {
+    gsap.to([currentInfo, currentImg], {
+      opacity: 0,
+      duration: 0.25,
+      ease: "power2.inOut",
+      onComplete: () => {
+        // Hide old content
+        currentInfo.classList.remove('active');
+        currentImg.classList.remove('active');
+
+        // Show new content
+        newInfo.classList.add('active');
+        newImg.classList.add('active');
+
+        gsap.fromTo(
+          [newInfo, newImg],
+          { opacity: 0 },
+          { opacity: 1, duration: 0.35, ease: "power2.inOut" }
+        );
+      }
+    });
+  }
+}
+
+gsap.from("#projects h1", {
+  scrollTrigger: {
+    trigger: "#projects",
+    start: "top 80%", // when it enters viewport
+    toggleActions: "play none none none", //: onEnter: play onLeave: none onEnterBack: none onLeaveBack: none                *need to remember the order
+    markers: true
+  },
+  x: -50,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+//Animation for Tabs Section ----------------
+gsap.from(".tabs-section", {
+  scrollTrigger: {
+    trigger: ".tabs-section",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    markers: true
+  },
+  x: -50,
+  opacity: 0,
+  stagger: 0.15,
+  duration: 0.6,
+  ease: "power3.out"
+});
+
+// Animate the active tab block (text + image) on scroll
+gsap.from(".tabs-section .tab-content.active", {
+  scrollTrigger: {
+    trigger: ".tabs-section",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    markers: true
+  },
+  y: 30,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power3.out"
+});
+
+gsap.from(".tabs-section .image img.active", {
+  scrollTrigger: {
+    trigger: ".tabs-section",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    markers: true
+  },
+  y: 30,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power3.out"
+});
