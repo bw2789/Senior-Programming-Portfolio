@@ -427,4 +427,23 @@ nav#nav1 a:hover {
     font-size: 1.65rem;
   }
 } 
- 
+
+.project-play-game-button {
+  background-color: #5372f0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.project-play-game-button:hover {
+  background-color: #3a5bbf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(83, 114, 240, 0.3);
+}
