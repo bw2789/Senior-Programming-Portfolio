@@ -11,21 +11,20 @@
 html,
 body {
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: #1a1a1a;
   margin: 0;
-  padding: 0;
+  padding: 60px 0 0 0; /* Account for fixed nav */
   color: #eee; /*  light text */
   font-family: "Inter", sans-serif;
 
   display: flex;
   flex-direction: column;
-
-
 }
 
 #banner {
@@ -57,9 +56,10 @@ body {
 nav#nav1 {
   width: 100%;
   background-color: black;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
+  align-self: flex-start;
 }
 
 nav#nav1 .container {
