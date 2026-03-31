@@ -212,4 +212,4 @@ gsap.from(".footer", {
   opacity: 0,
   duration: 1,
   ease: "power3.out"
-});
+}); 
