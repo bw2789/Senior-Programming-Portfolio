@@ -199,3 +199,17 @@ gsap.from(".tabs-section .image img.active", {
   duration: 0.8,
   ease: "power3.out"
 });  
+
+
+gsap.from(".footer", {
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "top 80%", // when it enters viewport
+    toggleActions: "play none none none", //: onEnter: play onLeave: none onEnterBack: none onLeaveBack: none                *need to remember the order
+    markers: false
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
