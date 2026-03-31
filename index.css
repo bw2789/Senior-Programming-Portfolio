@@ -83,7 +83,7 @@ nav#nav1 a {
 }
 
 nav#nav1 a:hover {
-  color: rgb(173,12,12);
+  color: #5372f0;
   background-color: rgb(43,43,43);
   text-decoration: underline;
 }
