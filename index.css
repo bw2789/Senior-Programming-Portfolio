@@ -300,6 +300,20 @@ nav#nav1 a:hover {
   position: relative;
   color: #fff;
 }
+
+#about-me {
+  text-align: center;
+  margin: clamp(40px, 6vw, 80px) 0 20px;
+}
+
+#about-me h1 {
+  font-size: 2.5rem;     
+  font-weight: 700;
+  display: inline-block;  
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
   
 
 /*Tabs---------------- */
@@ -530,4 +544,65 @@ nav#nav1 a:hover {
 .footer-icon {
   width: 25px;
   height: auto;
+} 
+
+
+/* about me css */
+#about-me-pfp {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid #3a5bbf;
+  box-shadow: 0 0 30px #3a5bbf;
+  object-fit: cover;
+}
+
+#about-me-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.about-left {
+  text-align: center;
+}
+
+
+.about-right {
+  max-width: 500px;
+}
+
+.about-right p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.about-button {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  display: inline-flex;        
+  align-items: center;         
+  justify-content: center;     
+  gap: 8px;                  
+}
+.about-button:hover {
+  background-color: #3a5bbf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(83, 114, 240, 0.3);
 } 

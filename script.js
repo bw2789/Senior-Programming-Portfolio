@@ -9,20 +9,39 @@ let chars = split.chars
 
 let tl = gsap.timeline();
 
+// slide up effect with back easing
+// tl.from(chars, {
+//   yPercent: 130,
+//   opacity: 0,
+//   stagger: 0.02,
+//   ease: "back.out",
+//   duration: 0.5
+// })
+// .from("#pfp", {
+//   y: 100,         
+//   opacity: 0,      
+//   scale: 0.8,     
+//   duration: 0.8,
+//   ease: "back.out(1.7)"
+// }, "<"); // "<" means start at the same time as previous animation
+
+
+// drop down erffect with random rotation and bounce easing
 tl.from(chars, {
-  yPercent: 130,
+  y: -150,                       
+  rotation: () => gsap.utils.random(-30, 30), 
   opacity: 0,
-  stagger: 0.02,
-  ease: "back.out",
-  duration: 0.5
+  stagger: 0.03,                  
+  duration: 0.8,
+  ease: "bounce.out"              
 })
 .from("#pfp", {
-  y: 100,         
-  opacity: 0,      
-  scale: 0.8,     
+  y: 100,
+  opacity: 0,
+  scale: 0.8,
   duration: 0.8,
   ease: "back.out(1.7)"
-}, "<"); // "<" means start at the same time as previous animation
+}, "<"); // starts at same time as previous
 // banner animation ends-------------------------
 
 
@@ -213,3 +232,46 @@ gsap.from(".footer", {
   duration: 1,
   ease: "power3.out"
 }); 
+
+// animation for about me
+
+const aboutSplit = SplitText.create("#about-me h1", { type: "chars" });
+gsap.from(aboutSplit.chars, {
+  scrollTrigger: {
+    trigger: "#about-me",
+    start: "top 80%", // when it enters viewport
+  },
+  y: () => gsap.utils.random(-200, -50),
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  stagger: 0.03,
+  duration: () => gsap.utils.random(0.5, 1.5)
+});
+
+
+gsap.from(".about-left", {
+  scrollTrigger: {
+    trigger: "#about-me",
+    start: "top 80%", // when it enters viewport
+    toggleActions: "play none none none", //: onEnter: play onLeave: none onEnterBack: none onLeaveBack: none                *need to remember the order
+    markers: false
+  },
+  x: -50,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from("#about-right", {
+  scrollTrigger: {
+    trigger: "#about-me",
+    start: "top 80%", // when it enters viewport
+    toggleActions: "play none none none", //: onEnter: play onLeave: none onEnterBack: none onLeaveBack: none                *need to remember the order
+    markers: false
+  },
+  x: 50,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
